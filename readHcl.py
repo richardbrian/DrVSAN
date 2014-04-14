@@ -8,7 +8,7 @@ from pyVim import connect
 vcUserName = 'root'
 vcPwd = 'vmware'
 
-VCIP = "10.112.173.233"
+VCIP='xxxx'
 
 #hclFile = 'vi_vsan_guide-partial.csv'
 logging.basicConfig(filename='vsanHCL.log',format='%(asctime)s %(message)s',level=logging.DEBUG)
