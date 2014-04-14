@@ -113,7 +113,6 @@ def updateIOControllerInfo(vsanInventoryFile, hostSystem, dataHash):
 def updateDeviceInfo(vsanInventoryFile, hostSystem, dataHash, adapterNameList):
    logging.info("Executing updateDeviceInfo on %s..." % hostSystem.name)
    logging.warning("Device info from the host %s..." % hostSystem.name)
-   #import pdb;pdb.set_trace()
 
    if not adapterNameList:
       logging.warning("There are not local adapters on the host" % hostSystem.name)
@@ -169,14 +168,14 @@ def runHclValidationTest(targetName,userName,password,hclFile,vsanInventoryFile)
    if si:
       logging.debug("Successfully connected to the target.")
       logging.debug("Target is a VC")
-   #import pdb;pdb.set_trace()
+
    logging.info("#######################################################################################")
    logging.info("VSAN HCL validation start")
    logging.debug("#######################################################################################")
 
    logging.debug("Retrieving service instance....")
    retrieveContent=si.RetrieveContent()
-   #import pdb;pdb.set_trace()
+
    logging.debug("Geting the datacenter information...")
    ListOfAllDataCenters = retrieveContent.rootFolder.childEntity
 
